@@ -108,15 +108,12 @@
     const resetBtn = document.getElementById('resetBtn');
     const adminMessage = document.getElementById('adminMessage');
 
-    // Check for admin access
     if (window.location.search.includes('admin=1')) {
       adminPanel.style.display = 'block';
     }
 
-    // Load available colors
     loadColors();
 
-    // Check if user already has a color
     const savedColor = localStorage.getItem('assignedColor');
     if (savedColor) {
       showResult(JSON.parse(savedColor));
